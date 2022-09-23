@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ShowOpacityAnimationName } from "../../styles/animations";
+import { devices } from "../../styles/devices";
 
 export const Background = styled.div`
   position: absolute;
@@ -33,6 +34,16 @@ export const Box = styled.div`
 
   p {
     font-size: 1.5rem;
+  }
+
+  @media ${devices.mobile}{
+    width: 90%;
+  }
+
+  @media ${devices.tiny_mobile}{
+    h1 {
+      font-size: 3rem;
+    }
   }
 `;
 export const Button = styled.button`

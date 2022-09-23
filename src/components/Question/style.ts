@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../styles/devices";
 
 export const Button = styled.button<{show: boolean, correct: boolean}>`
   border-radius: 5px;
@@ -39,4 +40,16 @@ export const Button = styled.button<{show: boolean, correct: boolean}>`
     }
   }};
   cursor: pointer;
+
+  @media ${devices.tabletW} and (${devices.tabletH}) {
+    font-size: 2rem;
+  }
+
+  @media ${devices.mobile} {
+    font-size: 1.5rem;
+  }
+
+  @media ${devices.tiny_mobile} {
+    font-size: 1rem;
+  }
 `

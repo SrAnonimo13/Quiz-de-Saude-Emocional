@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from './devices';
 
 export const TopBox = styled.div`
   background-color: ${e => e.theme['blue-300']};
@@ -10,6 +11,19 @@ export const TopBox = styled.div`
   font-family: monospace;
   text-align: center;
   font-size: 1.5rem;
+
+  @media ${devices.tabletW} and (${devices.tabletH}) {
+    font-size: 3rem;
+  }
+
+  @media ${devices.mobile} {
+    font-size: 2rem;
+  }
+
+  @media ${devices.tiny_mobile} {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 `;
 
 export const AppContainer = styled.div`
@@ -21,6 +35,23 @@ export const AppContainer = styled.div`
   height: 100vh;
   margin: 0 auto;
   padding: 1rem 0;
+
+  @media ${devices.tabletW} {
+    width: 80%;
+  }
+
+  @media ${devices.tiny_mobile}{
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  @media ${devices.tabletW} and (${devices.tabletH}) {
+    font-size: 1.5rem;
+  }
+
+  @media ${devices.mobile} {
+    font-size: 1rem;
+  }
 
   main {
     display: flex;
